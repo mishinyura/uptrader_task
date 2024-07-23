@@ -1,5 +1,6 @@
 
 {% if filter == 'main_menu' %}
+{{ request.path }}
 <ul class="header__menu">
     {% for item, val in queryset.items %}
     <li class="header__item">
