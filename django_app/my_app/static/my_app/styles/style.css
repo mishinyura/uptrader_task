@@ -42,6 +42,9 @@ Styles for header       |
     visibility: visible;
     transform: none;
 }
+.header__item.active{
+    border-color: white;
+}
 .header__item:hover{
     border-color: white;
 }
@@ -52,6 +55,7 @@ Styles for header       |
     display: block;
     padding: 10px;
 }
+
 .header__submenu{
     position: absolute;
     top: 100%;
