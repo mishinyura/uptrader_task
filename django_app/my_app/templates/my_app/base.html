@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'my_app/styles/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'my_app/styles/style.css' %}">
     {% block title %}{% endblock title %}
 </head>
 <body>
@@ -16,6 +18,18 @@
                     <a href="#" class="header__link">
                         Ссылка
                     </a>
+                    <ul class="header__submenu">
+                        <li class="header__subitem">
+                            <a href="#" class="header__sublink">
+                                Подссылка
+                            </a>
+                        </li>
+                        <li class="header__subitem">
+                            <a href="#" class="header__sublink">
+                                Подссылка
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="header__item">
                     <a href="#" class="header__link">
@@ -54,13 +68,46 @@
                     Ipsum alias beatae adipisci repellendus rerum aliquid. Excepturi natus non illo quos, sed expedita hic iusto beatae officia eligendi blanditiis quasi pariatur reprehenderit facilis! Error esse atque quam sint totam.
                     Esse perspiciatis quia officiis culpa qui quidem officia dolorum doloremque fuga debitis, ad dicta impedit aliquam alias ab ipsa vero molestias eaque, sint consequuntur veritatis consectetur adipisci! Corporis, rerum aspernatur?
                     Accusantium officiis neque vero sunt, commodi aspernatur et.
+                    Accusamus vitae soluta ipsa quia nisi atque quis impedit sed maxime! Itaque accusantium culpa cum deleniti doloribus. Corporis, aliquam cupiditate consequatur alias nostrum, laudantium neque sed, repellat sunt sint fugit!
+                    Eligendi, cumque modi. Optio commodi quaerat deleniti velit ut! Itaque hic accusantium, deserunt natus quasi aut unde placeat quis, id explicabo at optio qui voluptatibus atque aperiam excepturi sit magni!
+                    Maiores nesciunt similique, distinctio architecto aperiam totam unde voluptatibus et nobis eveniet tempora molestias velit sit asperiores modi excepturi quos rerum. Tempore ea officia itaque illum temporibus consequatur numquam magni.
+                    Doloremque, recusandae exercitationem iste non at voluptates numquam nulla in harum animi qui necessitatibus neque ea ab nihil cum quisquam dolore sed incidunt ipsam beatae? Omnis ullam asperiores culpa cum.
+                    Ipsum alias beatae adipisci repellendus rerum aliquid. Excepturi natus non illo quos, sed expedita hic iusto beatae officia eligendi blanditiis quasi pariatur reprehenderit facilis! Error esse atque quam sint totam.
+                    Esse perspiciatis quia officiis culpa qui quidem officia dolorum doloremque fuga debitis, ad dicta impedit aliquam alias ab ipsa vero molestias eaque, sint consequuntur veritatis consectetur adipisci! Corporis, rerum aspernatur?
+                    Accusantium officiis neque vero sunt, commodi aspernatur et.
                 </p>
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="footer__container">
-
+            <nav class="footer__nav">
+                <a href="/" class="footer__logo">
+                    LOGO COMPANY
+                </a>
+                <ul class="footer__menu">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            Ссылка
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            Ссылка
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            Ссылка
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="footer__copyright">
+                Любое использование либо копирование материалов или подборки материалов сайта, 
+                элементов дизайна и оформления допускается лишь с разрешения правообладателя и 
+                только со ссылкой на наш источник
+            </p>
         </div>
     </footer>
 {% block body %}

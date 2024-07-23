@@ -1,0 +1,108 @@
+/*
+------------------------|
+Main stiles             |
+------------------------V
+*/
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+/*
+------------------------|
+Styles for header       |
+------------------------V
+*/
+.header{
+    background-color: rgb(0, 9, 93);
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    padding: 40px 25px;
+    margin: auto;
+}
+.header__menu{
+    display: flex;
+    justify-content: space-between;
+}
+.header__item{
+    position: relative;
+    border-top: 2px solid transparent;
+    transition: border-color .1s linear
+}
+.header__item:hover .header__submenu{
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+.header__item:hover{
+    border-color: white;
+}
+.header__item:not(:last-child){
+    margin-right: 30px;
+}
+.header__link{
+    display: block;
+    padding: 10px;
+}
+.header__submenu{
+    position: absolute;
+    top: 100%;
+    padding: 20px;
+    background-color: rgb(0, 9, 93);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: transform .1s linear,
+    opacity .1s linear,
+    visibility .1s linear;
+}
+.header__subitem:not(:last-child){
+    margin-bottom: 15px;
+}
+/*
+------------------------|
+Styles for hero section |
+------------------------V
+*/
+.hero__container{
+    max-width: 1300px;
+    padding: 40px 25px;
+    margin: auto;
+}
+/*
+------------------------|
+Styles for footer       |
+------------------------V
+*/
+.footer{
+    background-color: rgb(0, 9, 93);
+}
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    padding: 50px 25px 80px;
+    margin: auto;
+}
+.footer__nav{
+    display: flex;
+}
+.footer__logo{
+    display: block;
+    margin-right: 40px;
+}
+.footer__item:not(:last-child){
+    margin-bottom: 15px;
+}
+.footer__copyright{
+    max-width: 400px;
+    color: white;
+}
