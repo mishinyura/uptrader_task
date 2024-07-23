@@ -1,0 +1,38 @@
+
+{% if filter == 'main_menu' %}
+{{ request.path }}
+<ul class="header__menu">
+    {% for item, val in queryset.items %}
+    <li class="header__item">
+        <a href={% firstof val.slug '#' %} 
+        class="header__link {% if request.path == val.slug %}active{% endif %}">
+            {{ item }}
+        </a>
+        {% if val.children %}
+        <ul class="header__submenu">
+            {% for child in val.children %}
+            
+            <li class="header__subitem">
+                <a href={% firstof child.url '#' %} class="header__sublink">
+                    {{ child.name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% if filter == 'bottommenu' %}
+<ul class="footer__menu">
+    {% for item, val in queryset.items %}
+    <li class="footer__item">
+        <a href={% firstof val.slug '#' %} class="footer__link">
+            {{ item }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}

@@ -1,0 +1,41 @@
+{% load static %}
+{% load draw_menu %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'my_app/styles/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'my_app/styles/style.css' %}">
+    {% block title %}{% endblock title %}
+</head>
+<body>
+    <header class="header">
+        <nav class="header__container">
+            <a href="/" class="header__logo">
+                LOGO COMPANY
+            </a>
+            {% draw_menu 'main_menu' %}
+        </nav>
+    </header>
+    <main class="main">
+        {% block body %}
+        {% endblock body %}
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <nav class="footer__nav">
+                <a href="/" class="footer__logo">
+                    LOGO COMPANY
+                </a>
+                {% draw_menu 'bottommenu' %}
+            </nav>
+            <p class="footer__copyright">
+                Любое использование либо копирование материалов или подборки материалов сайта, 
+                элементов дизайна и оформления допускается лишь с разрешения правообладателя и 
+                только со ссылкой на наш источник
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
