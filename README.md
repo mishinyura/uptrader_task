@@ -6,13 +6,20 @@
 и не забудьте пометить django_app как рабочую директорию
 во избежании конфликта путей
 3. В settings.py внесите данные по БД и выполните команду:
-<br />
-`python manage.py migrate`
-<br />
+```
+python manage.py migrate
+```
 При создании использовался PostgreSQL
 4. Для инициализации тестовых меню в БД, воспользуйтесь командой:
-<br />`python manage.py create_test_menu`
+```
+python manage.py create_test_menu
+```
 5. Для проверки административной панели потребуется создать пользователя
-<br />`python manage.py createsuperuser`
-5. Для запуска тестового сервера выполните:
-<br />`python manage.py runserver`
+```
+python manage.py createsuperuser
+```
+6. Для запуска тестового сервера выполните:
+<br />
+```
+python manage.py runserver
+```
