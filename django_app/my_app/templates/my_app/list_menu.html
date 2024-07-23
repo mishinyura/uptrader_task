@@ -1,16 +1,17 @@
 
-{% if filter == 'topmenu' %}
+{% if filter == 'main_menu' %}
 <ul class="header__menu">
     {% for item, val in queryset.items %}
     <li class="header__item">
-        <a href={{ item.url }} class="header__link">
+        <a href={% firstof val.slug '#' %} class="header__link">
             {{ item }}
         </a>
         {% if val.children %}
         <ul class="header__submenu">
             {% for child in val.children %}
+            
             <li class="header__subitem">
-                <a href="#" class="header__sublink">
+                <a href={% firstof child.url '#' %} class="header__sublink">
                     {{ child.name }}
                 </a>
             </li>
@@ -23,4 +24,13 @@
 {% endif %}
 
 {% if filter == 'bottommenu' %}
+<ul class="footer__menu">
+    {% for item, val in queryset.items %}
+    <li class="footer__item">
+        <a href={% firstof val.slug '#' %} class="footer__link">
+            {{ item }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
 {% endif %}

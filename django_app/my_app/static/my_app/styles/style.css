@@ -55,7 +55,7 @@ Styles for header       |
 .header__submenu{
     position: absolute;
     top: 100%;
-    min-width: 400px;
+    min-width: 150px;
     padding: 20px;
     background-color: rgb(0, 9, 93);
     opacity: 0;
@@ -96,12 +96,15 @@ Styles for footer       |
 .footer__nav{
     display: flex;
 }
+.footer__menu{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 15px;
+}
 .footer__logo{
     display: block;
     margin-right: 40px;
-}
-.footer__item:not(:last-child){
-    margin-bottom: 15px;
 }
 .footer__copyright{
     max-width: 400px;
