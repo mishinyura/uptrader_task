@@ -1,4 +1,5 @@
 {% load static %}
+{% load draw_menu %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,7 @@
         <nav class="header__container">
             <a href="/" class="header__logo">
                 LOGO COMPANY
+                {% get_menu %}
             </a>
             <ul class="header__menu">
                 <li class="header__item">
