@@ -1,0 +1,28 @@
+
+<ul class="header__menu">
+    
+    {% for item in queryset %}
+    {{ item.name }}
+    <li class="header__item">
+    {% if not item.parent %}
+        <a href={{ item.url }} class="header__link">
+            {{ item.name }}
+        </a>
+    {% else %}
+        {{ queryset.link.all.0.name }}
+        <ul class="header__submenu">
+            {% for subitem in queryset.link.all %}
+            {% if subitem.parent == item %}
+            <li class="header__subitem">
+                <a href="#" class="header__sublink">
+                    Подссылка
+                </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+    </li>
+    {% endfor %}
+    
+</ul>

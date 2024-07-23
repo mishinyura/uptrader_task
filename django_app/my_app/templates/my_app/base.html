@@ -13,73 +13,13 @@
         <nav class="header__container">
             <a href="/" class="header__logo">
                 LOGO COMPANY
-                {% get_menu %}
             </a>
-            <ul class="header__menu">
-                <li class="header__item">
-                    <a href="#" class="header__link">
-                        Ссылка
-                    </a>
-                    <ul class="header__submenu">
-                        <li class="header__subitem">
-                            <a href="#" class="header__sublink">
-                                Подссылка
-                            </a>
-                        </li>
-                        <li class="header__subitem">
-                            <a href="#" class="header__sublink">
-                                Подссылка
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="header__item">
-                    <a href="#" class="header__link">
-                        Ссылка
-                    </a>
-                </li>
-                <li class="header__item">
-                    <a href="#" class="header__link">
-                        Ссылка
-                    </a>
-                </li>
-            </ul>
+            {% draw_menu 'topmenu' %}
         </nav>
     </header>
     <main class="main">
-        <section class="main__section hero">
-            <div class="hero__container">
-                <h1 class="hero__title">
-                    Выполнение тестового задания для UpTrader
-                </h1>
-                <p class="hero__descr">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, molestiae in, magni mollitia, a ut impedit repudiandae aut fuga itaque magnam nulla eos quis assumenda? Reprehenderit id eos laborum veritatis!
-                    Ullam, ratione officia! Harum voluptas tempore sapiente ullam numquam dolorem deleniti possimus, iusto provident, impedit culpa doloribus voluptatibus inventore expedita tempora incidunt cupiditate, optio repudiandae excepturi modi magnam facilis architecto.
-                    Excepturi veritatis repellendus tenetur velit ab. Sunt voluptatibus, quod quibusdam, blanditiis a consequuntur, eveniet aliquid similique eos molestias obcaecati maiores commodi velit ex pariatur reprehenderit cumque! Quia minima nesciunt eveniet.
-                    Quaerat, quasi autem rem temporibus ab expedita facilis! Blanditiis vel iste, voluptatum in dolorem culpa repellendus. Error mollitia repellat consectetur placeat maxime ex facere, quam tenetur nemo nam libero consequuntur?
-                    Suscipit commodi reiciendis nam provident dolorem sed, maxime minima accusantium nesciunt iure error, perspiciatis magni, iusto voluptas aut labore fuga sapiente illum unde maiores velit libero. Expedita optio placeat at.
-                    Rerum officia sapiente ullam est magni facilis perferendis iure sed unde ex numquam, accusantium dolore consequatur autem, error minus veniam? Aspernatur reiciendis sint mollitia excepturi fugit doloremque corporis amet aliquam?
-                    Est, et, velit, odit commodi perferendis amet libero dolor repellendus consequatur natus quo illum possimus omnis necessitatibus atque ipsum assumenda harum nam recusandae tempora laudantium consequuntur quidem asperiores. Quidem, impedit.
-                    Neque, dolor qui reprehenderit fugiat totam vitae fugit praesentium dolorum at error minus natus minima quas, reiciendis itaque ducimus obcaecati odio! Pariatur eos vero ut nemo aspernatur. Illo, fugiat alias.
-                    Odio earum, ut amet aliquam dolor optio error veniam totam ipsa sequi sed magnam iure repellendus culpa. Quam illo suscipit quisquam repellat repudiandae tenetur numquam. Odit soluta error ratione tempora!
-                    Voluptatibus vel, ad voluptates modi culpa dolore quis velit, reprehenderit fuga qui blanditiis dolores praesentium optio mollitia placeat adipisci aliquam nisi non. Esse quisquam, eligendi laborum omnis illo inventore quasi?
-                    Accusamus vitae soluta ipsa quia nisi atque quis impedit sed maxime! Itaque accusantium culpa cum deleniti doloribus. Corporis, aliquam cupiditate consequatur alias nostrum, laudantium neque sed, repellat sunt sint fugit!
-                    Eligendi, cumque modi. Optio commodi quaerat deleniti velit ut! Itaque hic accusantium, deserunt natus quasi aut unde placeat quis, id explicabo at optio qui voluptatibus atque aperiam excepturi sit magni!
-                    Maiores nesciunt similique, distinctio architecto aperiam totam unde voluptatibus et nobis eveniet tempora molestias velit sit asperiores modi excepturi quos rerum. Tempore ea officia itaque illum temporibus consequatur numquam magni.
-                    Doloremque, recusandae exercitationem iste non at voluptates numquam nulla in harum animi qui necessitatibus neque ea ab nihil cum quisquam dolore sed incidunt ipsam beatae? Omnis ullam asperiores culpa cum.
-                    Ipsum alias beatae adipisci repellendus rerum aliquid. Excepturi natus non illo quos, sed expedita hic iusto beatae officia eligendi blanditiis quasi pariatur reprehenderit facilis! Error esse atque quam sint totam.
-                    Esse perspiciatis quia officiis culpa qui quidem officia dolorum doloremque fuga debitis, ad dicta impedit aliquam alias ab ipsa vero molestias eaque, sint consequuntur veritatis consectetur adipisci! Corporis, rerum aspernatur?
-                    Accusantium officiis neque vero sunt, commodi aspernatur et.
-                    Accusamus vitae soluta ipsa quia nisi atque quis impedit sed maxime! Itaque accusantium culpa cum deleniti doloribus. Corporis, aliquam cupiditate consequatur alias nostrum, laudantium neque sed, repellat sunt sint fugit!
-                    Eligendi, cumque modi. Optio commodi quaerat deleniti velit ut! Itaque hic accusantium, deserunt natus quasi aut unde placeat quis, id explicabo at optio qui voluptatibus atque aperiam excepturi sit magni!
-                    Maiores nesciunt similique, distinctio architecto aperiam totam unde voluptatibus et nobis eveniet tempora molestias velit sit asperiores modi excepturi quos rerum. Tempore ea officia itaque illum temporibus consequatur numquam magni.
-                    Doloremque, recusandae exercitationem iste non at voluptates numquam nulla in harum animi qui necessitatibus neque ea ab nihil cum quisquam dolore sed incidunt ipsam beatae? Omnis ullam asperiores culpa cum.
-                    Ipsum alias beatae adipisci repellendus rerum aliquid. Excepturi natus non illo quos, sed expedita hic iusto beatae officia eligendi blanditiis quasi pariatur reprehenderit facilis! Error esse atque quam sint totam.
-                    Esse perspiciatis quia officiis culpa qui quidem officia dolorum doloremque fuga debitis, ad dicta impedit aliquam alias ab ipsa vero molestias eaque, sint consequuntur veritatis consectetur adipisci! Corporis, rerum aspernatur?
-                    Accusantium officiis neque vero sunt, commodi aspernatur et.
-                </p>
-            </div>
-        </section>
+        {% block body %}
+        {% endblock body %}
     </main>
     <footer class="footer">
         <div class="footer__container">
@@ -112,7 +52,6 @@
             </p>
         </div>
     </footer>
-{% block body %}
-{% endblock body %}
+
 </body>
 </html>
