@@ -55,6 +55,7 @@ Styles for header       |
 .header__submenu{
     position: absolute;
     top: 100%;
+    min-width: 400px;
     padding: 20px;
     background-color: rgb(0, 9, 93);
     opacity: 0;

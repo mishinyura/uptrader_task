@@ -10,5 +10,16 @@ def dra_menu():
 
 @register.inclusion_tag('my_app/list_menu.html')
 def draw_menu(filter: str) -> dict:
-    queryset = Menu.objects.get(name=filter).link.order_by('parent')
-    return {'queryset': queryset, 'menu': filter}
+    queryset = Menu.objects.get(name=filter).link.order_by('id')
+    menu = {}
+
+    for item in queryset:
+        if not item.parent:
+            menu[item.name] = {
+                'slug': item.url,
+                'children': []
+            }
+        else:
+            menu[item.parent.name]['children'].append(item)
+
+    return {'queryset': menu, 'filter': filter}

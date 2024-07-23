@@ -7,17 +7,17 @@ class Command(BaseCommand):
         self.stdout.write('Инициализация Top Menu')
         links = {
             'Услуги': (None, '/services'),
-            'Товары': (None, '/products'),
-            'Блог': (None, '/blog'),
-            'Контакты': (None, '/contacts'),
-            'О нас': (None, '/about'),
-            'Отзывы': (None, '/reviews'),
             'Выгул собак': (1, ''),
             'Выгул кошек': (1, ''),
             'Выкул коз': (1, ''),
+            'Товары': (None, '/products'),
             'Корма для собак': (2, ''),
             'Корма для кошек': (2, ''),
             'Корма для коз': (2, ''),
+            'Блог': (None, '/blog'),
+            'О нас': (None, '/about'),
+            'Контакты': (None, '/contacts'),
+            'Отзывы': (None, '/reviews'),
         }
         topmenu = Menu.objects.create(name='topmenu')
         bottommenu = Menu.objects.create(name='bottommenu')

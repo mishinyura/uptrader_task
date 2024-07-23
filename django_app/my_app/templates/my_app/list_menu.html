@@ -1,28 +1,26 @@
 
+{% if filter == 'topmenu' %}
 <ul class="header__menu">
-    
-    {% for item in queryset %}
-    {{ item.name }}
+    {% for item, val in queryset.items %}
     <li class="header__item">
-    {% if not item.parent %}
         <a href={{ item.url }} class="header__link">
-            {{ item.name }}
+            {{ item }}
         </a>
-    {% else %}
-        {{ queryset.link.all.0.name }}
+        {% if val.children %}
         <ul class="header__submenu">
-            {% for subitem in queryset.link.all %}
-            {% if subitem.parent == item %}
+            {% for child in val.children %}
             <li class="header__subitem">
                 <a href="#" class="header__sublink">
-                    Подссылка
+                    {{ child.name }}
                 </a>
             </li>
-            {% endif %}
             {% endfor %}
         </ul>
-    {% endif %}
+        {% endif %}
     </li>
     {% endfor %}
-    
 </ul>
+{% endif %}
+
+{% if filter == 'bottommenu' %}
+{% endif %}
