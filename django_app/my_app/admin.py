@@ -9,6 +9,6 @@ class MenuAdmin(admin.ModelAdmin):
 
 @admin.register(Link)
 class LinkAdmin(admin.ModelAdmin):
-    list_display = 'pk', 'name', 'url', 'position'
+    list_display = 'pk', 'parent', 'name', 'url', 'position'
     list_display_links = 'pk', 'name'
     ordering = 'pk',

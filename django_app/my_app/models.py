@@ -9,3 +9,6 @@ class Link(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
     url = models.CharField(max_length=255, null=False, blank=True)
     position = models.PositiveSmallIntegerField(null=False, blank=True, default=0)
+
+    def __str__(self):
+        return self.name
