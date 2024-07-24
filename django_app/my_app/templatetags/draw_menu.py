@@ -1,5 +1,5 @@
 from django import template
-from my_app.models import Menu, Link
+from my_app.models import Menu
 
 register = template.Library()
 
