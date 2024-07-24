@@ -3,7 +3,7 @@
 {{ request.path }}
 <ul class="header__menu">
     {% for item, val in queryset.items %}
-    <li class="header__item {% if request.path == val.slug %}active{% endif %}">
+    <li class="header__item {% if forloop.first %}active{% endif %}">
         <a href={% firstof val.slug '#' %} 
         class="header__link">
             {{ item }}
