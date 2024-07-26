@@ -4,8 +4,7 @@
 <ul class="header__menu">
     {% for item, val in queryset.items %}
     <li class="header__item">
-        <a href={% firstof val.slug '#' %} 
-        class="header__link">
+        <a href={% firstof val.slug '#' %} class="header__link">
             {{ item }}
         </a>
         {% if val.children %}
